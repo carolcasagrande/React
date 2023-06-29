@@ -1,10 +1,10 @@
 import styles from './Header.module.css'
-import doctorLogo from '../assets/doctors-logo.svg'
+import laptopLogo from '../assets/laptop.svg'
 
 export function Header(){
     return (
         <header className={styles.header}>
-            <img src={doctorLogo} alt="logo do Doctors" />
+            <img src={laptopLogo} alt="logo" />
         </header>
     )
 }

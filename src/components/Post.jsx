@@ -1,3 +1,5 @@
+import { Avatar } from './Avatar'
+import { Comment } from './Comment'
 import styles from './Post.module.css'
 
 export function Post(){
@@ -5,10 +7,10 @@ export function Post(){
         <article className={styles.post}>
             <header>
                 <div className={styles.author}>
-                    <img className={styles.avatar} src="https://img.freepik.com/vetores-gratis/ilustracao-do-conceito-de-medico_114360-1072.jpg?w=740&t=st=1687792231~exp=1687792831~hmac=47cdfd35036a11e820935471dafb975b3ccce82bafa2740eec4fb98bcc1726c4" />
+                    <Avatar src="https://img.freepik.com/vetores-gratis/mulher-que-trabalha-a-partir-de-seu-conceito-de-teletrabalho-em-casa_23-2148626639.jpg?w=740&t=st=1687874781~exp=1687875381~hmac=8ffcca9193ab2cad309d814eb5e750de4d927db0037fd07f9e7e9526a568e37d" />
                     <div className={styles.authorInfo}>
                         <strong>Caroline Casagrande</strong>
-                        <span>Dermatologista</span>
+                        <span>Desenvolvedora Front-end e UX</span>
                     </div>
                 </div>
 
@@ -26,6 +28,20 @@ export function Post(){
                     <a href="">#nlw</a> {' '}
                     <a href="">#rocketseat</a>
                 </p>
+            </div>
+
+            <form className={styles.commentForm}>
+                <strong>Deixe seu feedback</strong>
+                <textarea 
+                    placeholder="Deixe um comentário"                
+                />
+                <button type="submit">Publicar</button>
+            </form>
+
+            <div className={styles.commentList}>
+                <Comment />
+                <Comment />
+                <Comment />
             </div>
         </article>
     )
